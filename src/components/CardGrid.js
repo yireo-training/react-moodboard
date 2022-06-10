@@ -8,7 +8,6 @@ const CardGrid = () => {
 
   useEffect(() => {
     fetchRemoteBranches().then(remoteBranches => {
-      console.log(remoteBranches);
       setBranches(remoteBranches.pages);
     });
   }, []);
