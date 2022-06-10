@@ -1,7 +1,7 @@
 const Card = (props) => {
     const showOverlay = props.isActive;
-    const name = props.name;
-    const imageUrl = props.image;
+    const name = props.title;
+    const imageUrl = props.image.src;
 
     return (
     <div onClick={props.onClickHandler} className="tw-card tw-w-full tw-relative tw-overflow-hidden tw-rounded tw-transition-opacity">
