@@ -11,6 +11,8 @@ const App = () => {
   useEffect(() => {
     fetchRemoteBranches().then(remoteBranches => {
       setBranches(remoteBranches.pages);
+    }).catch(error => {
+      console.log(error);
     });
   }, []);
 
@@ -20,7 +22,7 @@ const App = () => {
         <Sidebar activeBranch={activeBranch} />
       </aside>
       <main className="w-full h-full">
-        <CardGrid branches={branches} activeBranch={activeBranch} setActiveBranch={setActiveBranch} />
+      {!activeBranch && <CardGrid branches={branches} activeBranch={activeBranch} setActiveBranch={setActiveBranch} />}
         {activeBranch && <ChildImages activeBranch={activeBranch} />}
       </main>
     </div>

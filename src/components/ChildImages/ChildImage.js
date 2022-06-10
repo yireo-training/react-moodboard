@@ -1,5 +1,5 @@
 const ChildImage = (props) => {
-    const imageSrc = props.childImage.src;
+  const imageSrc = props.childImage.src;
 
   return (
     <div className="tw-w-full tw-relative tw-overflow-hidden tw-rounded tw-transition-opacity">
